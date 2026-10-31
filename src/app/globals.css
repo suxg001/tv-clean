@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* AI 实战库：浅色主题，全局只保留最基础的排版设定。
+   组件样式全部用 Tailwind utility class，避免全局污染，
+   方便以后模板化复用时换肤。 */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f7faf9;
+  color: #1e293b;
+  font-family:
+    system-ui, -apple-system, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+
+/* 长文本截断（Tailwind v4 已内置 line-clamp，这里仅做兜底） */
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
